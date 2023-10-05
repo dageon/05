@@ -2,15 +2,31 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	int n, i, sum = 0;
+	int a, b, result;
+	char op;
 	
-	printf("input a number: ");
-	scanf("%i", &n);
+	printf("enter the calculation : ");
+	scanf("%i %c %i", &a, &op, &b);
 	
-	for(i=1; i<=n; i++)
-		sum = sum + i;
+	switch(op){
+		case '+':
+			result = a + b;
+			break;
+		case '-':
+			result = a - b;
+			break;
+		case '*':
+			result = a * b;
+			break;
+		case '/':
+			result = a / b;
+			break;
+		case '%':
+			result = a % b;
+			break;
+	}
 	
-	printf("The result is %i", sum);
+	printf(" = %i\n", result);
 	
 	return 0;
 }
