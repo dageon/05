@@ -2,31 +2,23 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	int a, b, result;
-	char op;
+	int n, answer = 59, sum = 0;
 	
-	printf("enter the calculation : ");
-	scanf("%i %c %i", &a, &op, &b);
+	do{
+		printf("Guess a number : ");
+		scanf("%i", &n);
+		
+		if(n>answer)
+			printf("high!\n");
+		else if(n<answer)
+			printf("low!\n");
+		else
+			printf("Congratulation! ");
+			
+		sum = sum + 1;
+	} while(n!=answer);
 	
-	switch(op){
-		case '+':
-			result = a + b;
-			break;
-		case '-':
-			result = a - b;
-			break;
-		case '*':
-			result = a * b;
-			break;
-		case '/':
-			result = a / b;
-			break;
-		case '%':
-			result = a % b;
-			break;
-	}
-	
-	printf(" = %i\n", result);
+	printf("trials:%i\n", sum);
 	
 	return 0;
 }
