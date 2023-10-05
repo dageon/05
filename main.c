@@ -2,17 +2,15 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	int num=0;
-	char c;
+	int n, i, sum = 0;
 	
-	printf("input a string: ");
+	printf("input a number: ");
+	scanf("%i", &n);
 	
-	while( (c=getchar()) != '\n'){
-		if(c>=48 && c<=57)		
-			num = num + 1;
-	}
+	for(i=1; i<=n; i++)
+		sum = sum + i;
 	
-	printf("the number of digits is %i", num);
+	printf("The result is %i", sum);
 	
 	return 0;
 }
