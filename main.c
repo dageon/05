@@ -2,15 +2,17 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	int a;
+	int num=0;
+	char c;
 	
-	printf("정수 하나를 입력하시오 :");
-	scanf("%i", &a);
+	printf("input a string: ");
 	
-	if(a < 0)
-		printf("절대값은 %i 입니다.\n", -a);
-	else
-		printf("절대값은 %i 입니다.\n", a);
+	while( (c=getchar()) != '\n'){
+		if(c>=48 && c<=57)		
+			num = num + 1;
+	}
+	
+	printf("the number of digits is %i", num);
 	
 	return 0;
 }
